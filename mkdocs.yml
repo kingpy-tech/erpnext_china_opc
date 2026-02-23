@@ -1,5 +1,5 @@
-site_name: ERPNext China OPC
-site_description: 专为中国“一人公司”和独立开发者打造的开源合规套件
+site_name: 青皮科技 (Kingpy Tech)
+site_description: 专为中国“一人公司”和独立开发者打造的技术与合规解决方案
 repo_url: https://github.com/kingpy-tech/erpnext_china_opc
 edit_uri: edit/main/docs/
 
@@ -13,10 +13,16 @@ theme:
     - search.highlight
 
 nav:
-  - 首页: index.md
-  - 安装部署: 01_ERPNext_Micro_Server_Install.md
-  - 财务初始化:
-    - 科目表导入: 02_Chart_of_Accounts_Import.md
-    - 命名规则配置: 03_Document_Naming_Series.md
-  - 本地化:
-    - 自定义翻译: 04_Custom_Translation_Import.md
+  - 公司主页: index.md
+  - 业务与项目: projects.md
+  - 开源分享:
+    - ERPNext 中国 OPC:
+      - 套件简介: erpnext/index.md
+      - 安装部署: erpnext/01_ERPNext_Micro_Server_Install.md
+      - 财务初始化:
+        - 科目表导入: erpnext/02_Chart_of_Accounts_Import.md
+        - 命名规则配置: erpnext/03_Document_Naming_Series.md
+      - 本地化:
+        - 自定义翻译: erpnext/04_Custom_Translation_Import.md
+    - 网站配置玩法: website/index.md
+  - 联系我们: contact.md
