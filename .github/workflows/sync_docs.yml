@@ -9,6 +9,10 @@ on:
       - 'mkdocs.yml'
       - '.github/workflows/sync_docs.yml'
 
+# 显式授予 GITHUB_TOKEN 推送分支的权限
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     name: 构建并部署文档到 COS 和 GitHub Pages
