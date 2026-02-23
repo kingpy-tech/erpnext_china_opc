@@ -23,6 +23,10 @@ jobs:
   build-and-deploy:
     name: 构建并部署文档
     runs-on: ubuntu-latest
+    # 增加环境变量配置，这是官方 GitHub Pages 部署要求的
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 获取最新代码
         uses: actions/checkout@v4
