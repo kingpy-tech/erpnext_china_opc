@@ -6,6 +6,8 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: zh
+  logo: material/cube-outline
+  favicon: material/cube-outline
   features:
     - navigation.tabs
     - navigation.top
