@@ -210,23 +210,30 @@ volumes:
 2. 当所有容器状态显示为**运行中**后，需要初始化站点。你可以通过 1Panel 的终端执行，或者 SSH 连接到服务器执行。
 3. 假设你的 Compose 项目名称叫 `erpnext`，通过以下命令进入 backend 容器并初始化（请将 `192.168.1.12` 替换为你的实际 IP）：
    ```bash
-   # 查看 backend 容器名，一般格式为 项目名-backend-1，如 erpnext-backend-1
+   # 注意：以下命令必须进入 erpnext-backend-1 容器内部执行！
+   # 宿主机上没有 bench 命令，如果执行报错 'command not found'，请检查是否已进入容器。
+
+   # 1. 进入容器 (假设容器名为 erpnext-backend-1)
    docker exec -it erpnext-backend-1 bash
    
-   # 创建新站点，站名保持与 IP 一致，设置管理员密码为 admin
+   # 2. 创建新站点 (进入容器后执行)
+   # 站名保持与 IP 一致，设置管理员密码为 admin
    bench new-site 192.168.1.12 --admin-password admin --db-root-password admin
    
-   # 在该站点上安装 erpnext 应用
+   # 3. 安装 ERPNext 应用
    bench --site 192.168.1.12 install-app erpnext
 
-   # 【重要】安装 HRMS (人力资源) 等独立拆分的应用
+   # 4. 【重要】安装 HRMS (人力资源) 等独立拆分的应用
    # 从 v14 开始，HRMS、Payments 等模块已从 ERPNext 核心中拆分，需单独安装。
    # 对于中国小微企业，发工资和个税申报是刚需，因此强烈建议安装。
    bench get-app hrms
    bench --site 192.168.1.12 install-app hrms
    
-   # 将其设为默认站点
+   # 5. 将其设为默认站点
    bench use 192.168.1.12
+
+   # 6. 退出容器
+   exit
    ```
 
 ### 3. 登录系统与初始化向导
