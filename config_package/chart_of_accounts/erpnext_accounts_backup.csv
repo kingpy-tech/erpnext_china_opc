@@ -1,79 +1,97 @@
-"Data Import Template"
-"Table:","Account"
-""
-""
-"Notes:"
-"Please do not change the template headings."
-"First data column must be blank."
-"If you are uploading new records, leave the ""name"" (ID) column blank."
-"If you are uploading new records, ""Naming Series"" becomes mandatory, if present."
-"Only mandatory fields are necessary for new records. You can delete non-mandatory columns if you wish."
-"For updating, you can update only selective columns."
-"You can only upload upto 5000 records in one go. (may be less in some cases)"
-""
-"DocType:","Account","","","","","","","","","","","","","","","",""
-"Column Labels:","ID","Account Name","Company","Parent Account","Created On","Created By","Disable","Account Number","Is Group","Root Type","Report Type","Currency","Account Type","Tax Rate","Frozen","Balance must be","Include in gross"
-"Column Name:","name","account_name","company","parent_account","creation","owner","disabled","account_number","is_group","root_type","report_type","account_currency","account_type","tax_rate","freeze_account","balance_must_be","include_in_gross"
-"Mandatory:","Yes","Yes","Yes","Yes","No","No","No","No","No","No","No","No","No","No","No","No","No"
-"Type:","Data","Data","Link","Link","Datetime","Link","Check","Data","Check","Select","Select","Link","Select","Float","Select","Select","Check"
-"Info:","","","Valid Company","Valid Account","dd-mm-yyyy","Valid User","0 or 1","","0 or 1","One of: Asset, Liability, Income, Expense, Equity","One of: Balance Sheet, Profit and Loss","Valid Currency","One of: Accumulated Depreciation, Asset Received But Not Billed, Bank, Cash, Chargeable, Capital Work in Progress, Cost of Goods Sold, Current Asset, Current Liability, Depreciation, Direct Expense, Direct Income, Equity, Expense Account, Expenses Included In Asset Valuation, Expenses Included In Valuation, Fixed Asset, Income Account, Indirect Expense, Indirect Income, Liability, Payable, Receivable, Round Off, Round Off for Opening, Stock, Stock Adjustment, Stock Received But Not Billed, Service Received But Not Billed, Tax, Temporary","","One of: No, Yes","One of: Debit, Credit","0 or 1"
-"Start entering data below this line"
-"","""1000 - 资产类 - QP""","资产","青皮（上海）信息科技有限公司","","2026-02-08 14:42:06.864778","Administrator",0,"1000",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""1001 - 库存现金 - QP""","库存现金","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-08 14:42:06.902168","Administrator",0,"1001",0,"Asset","Balance Sheet","CNY","Cash",0.0,"No","",0
-"","""1801 - 长期待摊费用 - QP""","长期待摊费用","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-08 14:42:07.092085","Administrator",0,"1801",0,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""1221 - 其他应收款 - QP""","其他应收款","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-08 14:42:06.889243","Administrator",0,"1221",0,"Asset","Balance Sheet","CNY","Current Asset",0.0,"No","",0
-"","""1701 - 无形资产 - QP""","无形资产","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-08 14:42:06.959785","Administrator",0,"1701",0,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""1122 - 应收帐款 - QP""","应收帐款","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-08 14:42:06.883205","Administrator",0,"1122",0,"Asset","Balance Sheet","CNY","Receivable",0.0,"No","",0
-"","""1002 - 银行存款 - QP""","银行存款","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-09 03:02:15.352777","Administrator",0,"1002",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""100201 - 工商银行 - QP""","工商银行","青皮（上海）信息科技有限公司","1002 - 银行存款 - QP","2026-02-11 02:12:32.607343","Administrator",0,"100201",0,"Asset","Balance Sheet","CNY","Bank",0.0,"No","Debit",0
-"","""1405 - 库存商品 - QP""","库存商品","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-09 03:02:15.384782","Administrator",0,"1405",0,"Asset","Balance Sheet","CNY","Stock",0.0,"No","",0
-"","""1601 - 固定资产 - QP""","固定资产","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-09 03:02:15.395559","Administrator",0,"1601",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""160101 - 电子设备 - QP""","电子设备","青皮（上海）信息科技有限公司","1601 - 固定资产 - QP","2026-02-08 19:15:44.031637","Administrator",0,"160101",0,"Asset","Balance Sheet","CNY","Fixed Asset",0.0,"No","",0
-"","""1602 - 累计折旧 - QP""","累计折旧","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-09 03:02:15.405364","Administrator",0,"1602",0,"Asset","Balance Sheet","CNY","Accumulated Depreciation",0.0,"No","",0
-"","""1123 - 预付账款 - QP""","预付账款","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-12 02:05:24.816415","Administrator",0,"1123",0,"Asset","Balance Sheet","CNY","Payable",0.0,"No","",0
-"","""1604 - 在建工程 - QP""","在建工程","青皮（上海）信息科技有限公司","1000 - 资产类 - QP","2026-02-12 02:18:44.035886","Administrator",0,"1604",0,"Asset","Balance Sheet","CNY","Capital Work in Progress",0.0,"No","",0
-"","""2000 - 负债类 - QP""","负债","青皮（上海）信息科技有限公司","","2026-02-08 14:42:07.085227","Administrator",0,"2000",1,"Liability","Balance Sheet","CNY","",0.0,"No","",0
-"","""2221 - 应交税费 - QP""","应交税费","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-08 14:42:07.240069","Administrator",0,"2221",1,"Liability","Balance Sheet","CNY","",0.0,"No","",0
-"","""222101 - 增值税 - QP""","增值税","青皮（上海）信息科技有限公司","2221 - 应交税费 - QP","2026-02-12 01:51:52.243416","Administrator",0,"222101",0,"Liability","Balance Sheet","CNY","Tax",0.0,"No","",0
-"","""222102 - 企业所得税 - QP""","企业所得税","青皮（上海）信息科技有限公司","2221 - 应交税费 - QP","2026-02-12 01:52:21.737817","Administrator",0,"222102",0,"Liability","Balance Sheet","CNY","Tax",0.0,"No","",0
-"","""2241 - 其他应付款 - QP""","其他应付款","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-08 14:42:07.103516","Administrator",0,"2241",0,"Liability","Balance Sheet","CNY","Payable",0.0,"No","",0
-"","""2201 - 应付票据 - QP""","应付票据","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-08 14:42:07.088037","Administrator",0,"2201",0,"Liability","Balance Sheet","CNY","Payable",0.0,"No","",0
-"","""2501 - 长期借款 - QP""","长期借款","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-08 14:42:07.039312","Administrator",0,"2501",0,"Liability","Balance Sheet","CNY","Liability",0.0,"No","",0
-"","""2211 - 应付职工薪酬 - QP""","应付职工薪酬","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-08 14:42:07.110075","Administrator",0,"2211",0,"Liability","Balance Sheet","CNY","Payable",0.0,"No","",0
-"","""2202 - 应付账款 - QP""","应付账款","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-09 03:02:15.415563","Administrator",0,"2202",0,"Liability","Balance Sheet","CNY","Payable",0.0,"No","",0
-"","""2203 - 预收账款 - QP""","预收账款","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-09 03:02:15.426490","Administrator",0,"2203",0,"Liability","Balance Sheet","CNY","Receivable",0.0,"No","",0
-"","""2401 - 递延收益 - QP""","递延收益","青皮（上海）信息科技有限公司","2000 - 负债类 - QP","2026-02-12 02:01:26.200368","Administrator",0,"2401",0,"Liability","Balance Sheet","CNY","",0.0,"No","",0
-"","""3000 - 所有者权益类 - QP""","所有者权益","青皮（上海）信息科技有限公司","","2026-02-08 16:21:17.042495","Administrator",0,"3000",1,"Equity","Balance Sheet","CNY","",0.0,"No","",0
-"","""3103 - 本年利润 - QP""","本年利润","青皮（上海）信息科技有限公司","3000 - 所有者权益类 - QP","2026-02-08 14:42:06.991818","Administrator",0,"3103",0,"Equity","Balance Sheet","CNY","Equity",0.0,"No","",0
-"","""3001 - 实收资本 - QP""","实收资本","青皮（上海）信息科技有限公司","3000 - 所有者权益类 - QP","2026-02-08 14:42:06.988898","Administrator",0,"3001",0,"Equity","Balance Sheet","CNY","Income Account",0.0,"No","",0
-"","""3104 - 利润分配 - QP""","利润分配","青皮（上海）信息科技有限公司","3000 - 所有者权益类 - QP","2026-02-08 14:42:06.997118","Administrator",0,"3104",0,"Equity","Balance Sheet","CNY","Equity",0.0,"No","",0
-"","""5400 - 费用类 - QP""","费用类","青皮（上海）信息科技有限公司","","2026-02-08 14:42:06.973279","Administrator",0,"5400",1,"Expense","Profit and Loss","CNY","",0.0,"No","",0
-"","""5601 - 销售费用 - QP""","销售费用","青皮（上海）信息科技有限公司","5400 - 费用类 - QP","2026-02-08 14:42:06.980600","Administrator",0,"5601",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""5603 - 财务费用 - QP""","财务费用","青皮（上海）信息科技有限公司","5400 - 费用类 - QP","2026-02-08 14:42:07.062528","Administrator",0,"5603",1,"Expense","Profit and Loss","CNY","",0.0,"No","",0
-"","""560301 - 利息费用 - QP""","利息费用","青皮（上海）信息科技有限公司","5603 - 财务费用 - QP","2026-02-12 13:22:12.875394","Administrator",0,"560301",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560302 - 汇兑损失 - QP""","汇兑损失","青皮（上海）信息科技有限公司","5603 - 财务费用 - QP","2026-02-12 13:22:33.845933","Administrator",0,"560302",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560303 - 手续费 - QP""","手续费","青皮（上海）信息科技有限公司","5603 - 财务费用 - QP","2026-02-12 13:22:56.254660","Administrator",0,"560303",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560304 - 现金折扣 - QP""","现金折扣","青皮（上海）信息科技有限公司","5603 - 财务费用 - QP","2026-02-12 13:23:13.425248","Administrator",0,"560304",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""5401 - 主营业务成本 - QP""","主营业务成本","青皮（上海）信息科技有限公司","5400 - 费用类 - QP","2026-02-09 03:02:15.446792","Administrator",0,"5401",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""5602 - 管理费用 - QP""","管理费用","青皮（上海）信息科技有限公司","5400 - 费用类 - QP","2026-02-09 03:02:15.457256","Administrator",0,"5602",1,"Expense","Profit and Loss","CNY","",0.0,"No","",0
-"","""560201 - 开办费 - QP""","开办费","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-08 19:15:44.198426","Administrator",0,"560201",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560202 - 办公水电费 - QP""","办公水电费","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-08 19:15:44.206242","Administrator",0,"560202",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560203 - 研发费用 - QP""","研发费用","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-08 19:15:44.212980","Administrator",0,"560203",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560204 - 差旅费 - QP""","差旅费","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-08 19:15:44.219746","Administrator",0,"560204",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560205 - 业务招待费 - QP""","业务招待费","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-08 19:15:44.226472","Administrator",0,"560205",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""560206 - 中介服务费 - QP""","中介服务费","青皮（上海）信息科技有限公司","5602 - 管理费用 - QP","2026-02-12 14:40:35.715897","601978865@qq.com",0,"560206",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""5711 - 营业外支出 - QP""","营业外支出","青皮（上海）信息科技有限公司","5400 - 费用类 - QP","2026-02-12 02:20:53.801040","Administrator",0,"5711",0,"Expense","Profit and Loss","CNY","Expense Account",0.0,"No","",0
-"","""4000 - 成本类 - QP""","成本类","青皮（上海）信息科技有限公司","","2026-02-12 16:19:36.912061","601978865@qq.com",0,"4000",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""4301 - 研发支出 - QP""","研发支出","青皮（上海）信息科技有限公司","4000 - 成本类 - QP","2026-02-08 14:42:07.070791","Administrator",0,"4301",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""430102 - 资本化支出 - QP""","资本化支出","青皮（上海）信息科技有限公司","4301 - 研发支出 - QP","2026-02-08 14:42:07.056906","Administrator",0,"430102",0,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""430101 - 费用化支出 - QP""","费用化支出","青皮（上海）信息科技有限公司","4301 - 研发支出 - QP","2026-02-08 14:42:07.011953","Administrator",0,"430101",1,"Asset","Balance Sheet","CNY","",0.0,"No","",0
-"","""43010101 - 人员人工 - QP""","人员人工","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-11 04:03:25.784116","ai_cfo@kingpy.com",0,"43010101",0,"Asset","Balance Sheet","CNY","Expense Account",0.0,"No","",0
-"","""43010102 - 直接投入 - QP""","直接投入","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-11 04:03:25.739856","ai_cfo@kingpy.com",0,"43010102",0,"Asset","Balance Sheet","CNY","Expense Account",0.0,"No","",0
-"","""43010103 - 折旧 - QP""","折旧","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-11 04:15:36.543569","Administrator",0,"43010103",0,"Asset","Balance Sheet","CNY","Depreciation",0.0,"No","",0
-"","""43010104 - 无形资产摊销 - QP""","无形资产摊销","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-11 04:17:00.001960","Administrator",0,"43010104",0,"Asset","Balance Sheet","CNY","Indirect Expense",0.0,"No","",0
-"","""43010105 - 设计与委托开发 - QP""","设计与委托开发","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-12 00:59:25.707140","Administrator",0,"43010105",0,"Asset","Balance Sheet","CNY","Expense Account",0.0,"No","",0
-"","""43010106 - 其他 - QP""","其他","青皮（上海）信息科技有限公司","430101 - 费用化支出 - QP","2026-02-12 01:00:08.849857","Administrator",0,"43010106",0,"Asset","Balance Sheet","CNY","Expense Account",0.0,"No","",0
-"","""5000 - 收入类 - QP""","收入类","青皮（上海）信息科技有限公司","","2026-02-12 16:21:23.290150","601978865@qq.com",0,"5000",1,"Income","Profit and Loss","CNY","",0.0,"No","",0
-"","""5001 - 主营业务收入 - QP""","主营业务收入","青皮（上海）信息科技有限公司","5000 - 收入类 - QP","2026-02-09 03:02:15.437145","Administrator",0,"5001",0,"Income","Profit and Loss","CNY","Income Account",0.0,"No","",0
-"","""5051 - 其他业务收入 - QP""","其他业务收入","青皮（上海）信息科技有限公司","5000 - 收入类 - QP","2026-02-08 14:42:07.059656","Administrator",0,"5051",0,"Income","Profit and Loss","CNY","Income Account",0.0,"No","",0
-"","""5301 - 营业外收入 - QP""","营业外收入","青皮（上海）信息科技有限公司","5000 - 收入类 - QP","2026-02-08 14:42:06.976203","Administrator",0,"5301",0,"Income","Profit and Loss","CNY","Income Account",0.0,"No","",0
+"编号","禁用","科目名称","科目代码","是否分组","公司","一级科目类型","报表类型","货币","父科目","Account Category","科目类型","税率","已冻结？","余额方向","旧上级","是毛利相关科目"
+"1000 - 资金(资产)使用 - QP",0,"资金(资产)使用","1000",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","","","",0.0,"No","","",0
+"1100-1600 - 流动资产 - QP",0,"流动资产","1100-1600",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1000 - 资金(资产)使用 - QP","","",0.0,"No","","",0
+"1100 - 现款 - QP",0,"现款","1100",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Cash and Cash Equivalents","Cash",0.0,"No","","",0
+"1110 - 现金 - QP",0,"现金","1110",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100 - 现款 - QP","Cash and Cash Equivalents","Cash",0.0,"No","","",0
+"1200 - 银行账户 - QP",0,"银行账户","1200",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Cash and Cash Equivalents","Bank",0.0,"No","","",0
+"1300 - 应收账款 - QP",0,"应收账款","1300",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","","",0.0,"No","","",0
+"1310 - 应收账款 - QP",0,"应收账款","1310",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1300 - 应收账款 - QP","Trade Receivables","Receivable",0.0,"No","","",0
+"1400 - 存货(资产) - QP",0,"存货(资产)","1400",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Stock Assets","Stock",0.0,"No","","",0
+"1410 - 存货 - QP",0,"存货","1410",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1400 - 存货(资产) - QP","Stock Assets","Stock",0.0,"No","","",0
+"1500 - 所得税资产 - QP",0,"所得税资产","1500",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Other Current Assets","",0.0,"No","","",0
+"1600 - 借款及预付款（资产） - QP",0,"借款及预付款（资产）","1600",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","","",0.0,"No","","",0
+"1610 - 员工预支 - QP",0,"员工预支","1610",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1600 - 借款及预付款（资产） - QP","Other Receivables","Payable",0.0,"No","","",0
+"1650 - 证券及存款 - QP",0,"证券及存款","1650",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","","",0.0,"No","","",0
+"1651 - 保证金 - QP",0,"保证金","1651",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1650 - 证券及存款 - QP","Other Current Assets","",0.0,"No","","",0
+"1660 - Prepaid Expenses - QP",0,"Prepaid Expenses","1660",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Other Current Assets","",0.0,"No","","",0
+"1670 - Short-term Investments - QP",0,"Short-term Investments","1670",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1100-1600 - 流动资产 - QP","Short-term Investments","",0.0,"No","","",0
+"1700 - 固定资产 - QP",0,"固定资产","1700",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1000 - 资金(资产)使用 - QP","","",0.0,"No","","",0
+"1710 - 资本设备 - QP",0,"资本设备","1710",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1720 - 电子设备 - QP",0,"电子设备","1720",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1730 - 家具及固定装置 - QP",0,"家具及固定装置","1730",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1740 - 办公设备 - QP",0,"办公设备","1740",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1750 - 植物和机械设备 - QP",0,"植物和机械设备","1750",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1760 - 房屋 - QP",0,"房屋","1760",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Fixed Asset",0.0,"No","","",0
+"1770 - 软件 - QP",0,"软件","1770",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Intangible Assets","Fixed Asset",0.0,"No","","",0
+"1780 - 累计折旧 - QP",0,"累计折旧","1780",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Accumulated Depreciation",0.0,"No","","",0
+"1790 - 在建工程科目 - QP",0,"在建工程科目","1790",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1700 - 固定资产 - QP","Tangible Assets","Capital Work in Progress",0.0,"No","","",0
+"1800 - 投资 - QP",0,"投资","1800",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1000 - 资金(资产)使用 - QP","Long-term Investments","",0.0,"No","","",0
+"1900 - 临时科目 - QP",0,"临时科目","1900",1,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1000 - 资金(资产)使用 - QP","","",0.0,"No","","",0
+"1910 - 临时开账 - QP",0,"临时开账","1910",0,"青皮（上海）信息科技有限公司","Asset","Balance Sheet","CNY","1900 - 临时科目 - QP","Other Non-current Assets","Temporary",0.0,"No","","",0
+"2000 - 资金来源（负债） - QP",0,"资金来源（负债）","2000",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","","","",0.0,"No","","",0
+"2100-2400 - 流动负债 - QP",0,"流动负债","2100-2400",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2000 - 资金来源（负债） - QP","","",0.0,"No","","",0
+"2100 - 应付账款 - QP",0,"应付账款","2100",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","","",0.0,"No","","",0
+"2110 - 应付账款 - QP",0,"应付账款","2110",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100 - 应付账款 - QP","Trade Payables","Payable",0.0,"No","","",0
+"2120 - 应付职工薪资 - QP",0,"应付职工薪资","2120",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100 - 应付账款 - QP","Other Payables","",0.0,"No","","",0
+"2150 - Accrued Expenses - QP",0,"Accrued Expenses","2150",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","Other Current Liabilities","",0.0,"No","","",0
+"2160 - Customer Advances - QP",0,"Customer Advances","2160",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","Other Current Liabilities","",0.0,"No","","",0
+"2200 - 库存负债 - QP",0,"库存负债","2200",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","","",0.0,"No","","",0
+"2210 - 暂估库存(已收货，未开票) - QP",0,"暂估库存(已收货，未开票)","2210",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2200 - 库存负债 - QP","Trade Payables","Stock Received But Not Billed",0.0,"No","","",0
+"2211 - 暂估资产（已收货，未开票） - QP",0,"暂估资产（已收货，未开票）","2211",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2200 - 库存负债 - QP","Trade Payables","Asset Received But Not Billed",0.0,"No","","",0
+"2300 - 关税与税项 - QP",0,"关税与税项","2300",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","Current Tax Liabilities","Tax",0.0,"No","","",0
+"2310 - 应付TDS - QP",0,"应付TDS","2310",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2300 - 关税与税项 - QP","Current Tax Liabilities","",0.0,"No","","",0
+"VAT - QP",0,"VAT","",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","","2300 - 关税与税项 - QP","","Tax",17.0,"No","","2300 - 关税与税项 - QP",0
+"2350 - Short-term Provisions - QP",0,"Short-term Provisions","2350",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","Short-term Provisions","",0.0,"No","","",0
+"2400 - 借款（负债） - QP",0,"借款（负债）","2400",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2100-2400 - 流动负债 - QP","","",0.0,"No","","",0
+"2410 - 抵押借款 - QP",0,"抵押借款","2410",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2400 - 借款（负债） - QP","Long-term Borrowings","",0.0,"No","","",0
+"2420 - 无担保借款 - QP",0,"无担保借款","2420",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2400 - 借款（负债） - QP","Long-term Borrowings","",0.0,"No","","",0
+"2430 - 银行透支账户 - QP",0,"银行透支账户","2430",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2400 - 借款（负债） - QP","Short-term Borrowings","",0.0,"No","","",0
+"2500 - Non-Current Liabilities - QP",0,"Non-Current Liabilities","2500",1,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2000 - 资金来源（负债） - QP","","",0.0,"No","","",0
+"2510 - Long-term Provisions - QP",0,"Long-term Provisions","2510",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2500 - Non-Current Liabilities - QP","Long-term Provisions","",0.0,"No","","",0
+"2520 - Employee Benefits Obligation - QP",0,"Employee Benefits Obligation","2520",0,"青皮（上海）信息科技有限公司","Liability","Balance Sheet","CNY","2500 - Non-Current Liabilities - QP","Other Non-current Liabilities","",0.0,"No","","",0
+"3000 - 权益 - QP",0,"权益","3000",1,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","","","",0.0,"No","","",0
+"3100 - 股本 - QP",0,"股本","3100",0,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","3000 - 权益 - QP","Share Capital","Equity",0.0,"No","","",0
+"3200 - 股利支付 - QP",0,"股利支付","3200",0,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","3000 - 权益 - QP","Reserves and Surplus","Equity",0.0,"No","","",0
+"3300 - 所有者权益期初余额 - QP",0,"所有者权益期初余额","3300",0,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","3000 - 权益 - QP","Reserves and Surplus","Equity",0.0,"No","","",0
+"3400 - 留存收益 - QP",0,"留存收益","3400",0,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","3000 - 权益 - QP","Reserves and Surplus","Equity",0.0,"No","","",0
+"3500 - 重估盈余 - QP",0,"重估盈余","3500",0,"青皮（上海）信息科技有限公司","Equity","Balance Sheet","CNY","3000 - 权益 - QP","Reserves and Surplus","Equity",0.0,"No","","",0
+"4000 - 收入 - QP",0,"收入","4000",1,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","","","",0.0,"No","","",0
+"4100 - 直接收入 - QP",0,"直接收入","4100",1,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4000 - 收入 - QP","","",0.0,"No","","",0
+"4110 - 销售 - QP",0,"销售","4110",0,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4100 - 直接收入 - QP","Revenue from Operations","",0.0,"No","","",0
+"4120 - 服务 - QP",0,"服务","4120",0,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4100 - 直接收入 - QP","Revenue from Operations","",0.0,"No","","",0
+"4200 - 间接收入 - QP",0,"间接收入","4200",1,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4000 - 收入 - QP","","",0.0,"No","","",0
+"4210 - Interest Income - QP",0,"Interest Income","4210",0,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4200 - 间接收入 - QP","Investment Income","",0.0,"No","","",0
+"4220 - Interest on Fixed Deposits - QP",0,"Interest on Fixed Deposits","4220",0,"青皮（上海）信息科技有限公司","Income","Profit and Loss","CNY","4200 - 间接收入 - QP","Investment Income","",0.0,"No","","",0
+"5000 - 费用 - QP",0,"费用","5000",1,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","","","",0.0,"No","","",0
+"5100 - 直接费用 - QP",0,"直接费用","5100",1,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5000 - 费用 - QP","","",0.0,"No","","",0
+"5110 - 存货费用 - QP",0,"存货费用","5110",1,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5100 - 直接费用 - QP","","",0.0,"No","","",0
+"5111 - 销货成本 - QP",0,"销货成本","5111",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5110 - 存货费用 - QP","Cost of Goods Sold","Cost of Goods Sold",0.0,"No","","",0
+"5112 - 结转资产的费用 - QP",0,"结转资产的费用","5112",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5110 - 存货费用 - QP","Other Direct Costs","Expenses Included In Asset Valuation",0.0,"No","","",0
+"5118 - 结转库存的费用 - QP",0,"结转库存的费用","5118",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5110 - 存货费用 - QP","Other Direct Costs","Expenses Included In Valuation",0.0,"No","","",0
+"5119 - 库存调整 - QP",0,"库存调整","5119",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5110 - 存货费用 - QP","Other Direct Costs","Stock Adjustment",0.0,"No","","",0
+"5200 - 间接费用 - QP",0,"间接费用","5200",1,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5000 - 费用 - QP","","",0.0,"No","","",0
+"5201 - 行政费用 - QP",0,"行政费用","5201",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5202 - 销售佣金 - QP",0,"销售佣金","5202",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5203 - 折旧 - QP",0,"折旧","5203",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","Depreciation",0.0,"No","","",0
+"5204 - 娱乐费用 - QP",0,"娱乐费用","5204",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5205 - 运费 - QP",0,"运费","5205",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","Chargeable",0.0,"No","","",0
+"5206 - 法律费用 - QP",0,"法律费用","5206",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5207 - 市场营销费用 - QP",0,"市场营销费用","5207",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","Chargeable",0.0,"No","","",0
+"5208 - 办公维护费用 - QP",0,"办公维护费用","5208",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5209 - 办公室租金 - QP",0,"办公室租金","5209",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5210 - 邮政费用 - QP",0,"邮政费用","5210",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5211 - 打印和文具 - QP",0,"打印和文具","5211",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5212 - 小数精度尾差 - QP",0,"小数精度尾差","5212",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","Round Off",0.0,"No","","",0
+"5213 - 工资 - QP",0,"工资","5213",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5214 - 销售费用 - QP",0,"销售费用","5214",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5215 - 电话费 - QP",0,"电话费","5215",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5216 - 差旅费 - QP",0,"差旅费","5216",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5217 - 基础设施费用 - QP",0,"基础设施费用","5217",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5218 - 内部销账 - QP",0,"内部销账","5218",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5219 - 汇兑损益 - QP",0,"汇兑损益","5219",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5220 - Interest Expense - QP",0,"Interest Expense","5220",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Finance Costs","",0.0,"No","","",0
+"5221 - 银行费用 - QP",0,"银行费用","5221",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Finance Costs","",0.0,"No","","",0
+"5222 - 资产处置收益/损失 - QP",0,"资产处置收益/损失","5222",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Other Operating Income","",0.0,"No","","",0
+"5223 - 杂项费用 - QP",0,"杂项费用","5223",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","Chargeable",0.0,"No","","",0
+"5224 - 减值 - QP",0,"减值","5224",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Operating Expenses","",0.0,"No","","",0
+"5225 - Tax Expense - QP",0,"Tax Expense","5225",0,"青皮（上海）信息科技有限公司","Expense","Profit and Loss","CNY","5200 - 间接费用 - QP","Tax Expense","",0.0,"No","","",0

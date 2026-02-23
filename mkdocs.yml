@@ -26,5 +26,4 @@ nav:
         - 命名规则配置: erpnext/03_Document_Naming_Series.md
       - 本地化:
         - 自定义翻译: erpnext/04_Custom_Translation_Import.md
-    - 网站配置玩法: website/index.md
   - 联系我们: contact.md
