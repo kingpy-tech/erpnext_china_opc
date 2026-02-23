@@ -26,4 +26,6 @@ nav:
         - 命名规则配置: erpnext/03_Document_Naming_Series.md
       - 本地化:
         - 自定义翻译: erpnext/04_Custom_Translation_Import.md
+      - 模块扩展:
+        - HRMS Docker 安装踩坑: erpnext/05_HRMS_Docker_Install_Pitfalls.md
   - 联系我们: contact.md
