@@ -218,6 +218,12 @@ volumes:
    
    # 在该站点上安装 erpnext 应用
    bench --site 192.168.1.12 install-app erpnext
+
+   # 【重要】安装 HRMS (人力资源) 等独立拆分的应用
+   # 从 v14 开始，HRMS、Payments 等模块已从 ERPNext 核心中拆分，需单独安装。
+   # 对于中国小微企业，发工资和个税申报是刚需，因此强烈建议安装。
+   bench get-app hrms
+   bench --site 192.168.1.12 install-app hrms
    
    # 将其设为默认站点
    bench use 192.168.1.12
