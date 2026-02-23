@@ -3,60 +3,47 @@ name: Sync Docs to COS and GitHub Pages
 on:
   push:
     branches:
-      - main # 或者 master，根据你的默认分支而定
+      - main
     paths:
-      - 'docs/**' # 只有修改了 docs 目录下的文件时才触发自动同步
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/sync_docs.yml'
 
 jobs:
-  sync-to-tencent-cos:
-    name: 同步到国内版 (qingpy.cn) 腾讯云 COS
+  build-and-deploy:
+    name: 构建并部署文档到 COS 和 GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - name: 获取最新代码
         uses: actions/checkout@v3
 
-      # 【可选】如果你的官网使用了静态网站生成器（如 VitePress、MkDocs、Hugo 等），请在这里添加构建命令
-      # - name: 安装依赖并编译静态网站
-      #   run: |
-      #     npm install
-      #     npm run docs:build
-      
-      - name: 配置 Python 环境 (用于安装 coscmd)
+      - name: 配置 Python 环境
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
           
-      - name: 安装腾讯云 COS 命令行工具
-        run: pip install coscmd
+      - name: 安装依赖 (MkDocs & coscmd)
+        run: |
+          pip install mkdocs-material
+          pip install coscmd
 
-      - name: 上传到腾讯云 COS
+      - name: 编译静态网站
+        run: mkdocs build
+
+      - name: 上传到腾讯云 COS (国内版 qingpy.cn)
         env:
-          # 以下机密变量需要在你的 GitHub 仓库中配置：
-          # 进入仓库页面 -> Settings -> Secrets and variables -> Actions -> New repository secret
           COS_SECRET_ID: ${{ secrets.TENCENT_COS_SECRET_ID }}
           COS_SECRET_KEY: ${{ secrets.TENCENT_COS_SECRET_KEY }}
-          COS_BUCKET: ${{ secrets.TENCENT_COS_BUCKET }} # 例如：qingpy-1250000000
-          COS_REGION: ${{ secrets.TENCENT_COS_REGION }} # 例如：ap-shanghai
+          COS_BUCKET: ${{ secrets.TENCENT_COS_BUCKET }}
+          COS_REGION: ${{ secrets.TENCENT_COS_REGION }}
         run: |
           # 1. 初始化 COS 认证信息
           coscmd config -a $COS_SECRET_ID -s $COS_SECRET_KEY -b $COS_BUCKET -r $COS_REGION
-          # 2. 将本地 docs 目录的文件同步到 COS 的根目录
-          # 参数解释：-r 递归上传，-s 增量上传(比较MD5只传修改过的)，--delete 删除远端多余文件(保持严格一致)
-          # 注意：如果你使用了静态页面生成器，请把 ./docs 换成你的编译输出目录（如 ./.vitepress/dist）
-          coscmd upload -rs --delete ./docs /
+          # 2. 将编译后的 site 目录的文件同步到 COS
+          coscmd upload -rs --delete ./site /
 
-  sync-to-github-pages:
-    name: 同步到海外版 (kingpy.com) GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-      - name: 获取最新代码
-        uses: actions/checkout@v3
-
-      # 【可选】同样，如果有构建步骤也加在这里
-
-      - name: 部署到 GitHub Pages 分支 (gh-pages)
+      - name: 部署到 GitHub Pages (海外版 kingpy.com)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 发布的目录，这里演示发布原始 Markdown，如果你有编译目录这里也需要改成如 ./.vitepress/dist
-          publish_dir: ./docs
+          publish_dir: ./site
