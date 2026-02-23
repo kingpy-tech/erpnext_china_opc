@@ -41,6 +41,12 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+    environment:
+      # 【关键配置】如遇国内网络拉取 GitHub 代码失败 (Connection timed out)，请开启以下代理
+      # 前提：宿主机已运行代理软件(如 ShellCrash/Clash)，并开启了"允许局域网连接"
+      # 请将 192.168.1.12 替换为你宿主机的真实 IP，7890 替换为代理端口
+      # - HTTP_PROXY=http://192.168.1.12:7890
+      # - HTTPS_PROXY=http://192.168.1.12:7890
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
