@@ -4,7 +4,7 @@
 
 ## 目录结构
 - `/docs`: 详细的实施与配置操作攻略、最佳实践总结。
-  - `01_ERPNext_Redmi_Server_Install.md`: 红米小主机 Docker 标准安装指南。
+  - `01_ERPNext_Micro_Server_Install.md`: 微型服务器/家用小主机 Docker 标准安装指南。
   - `02_Chart_of_Accounts_Import.md`: 高新企业专属会计科目表集成导入指南。
   - `03_Document_Naming_Series.md`: 单据编号规则个性化定制指南 (ACC 替换为公司缩写)。
 - `/config_package/chart_of_accounts`: 针对高企认证标准定制的会计科目表数据源 (`erpnext_accounts_backup.csv`，支持 ERPNext Data Import 直接导入)。
