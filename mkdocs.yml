@@ -27,5 +27,5 @@ nav:
       - 本地化:
         - 自定义翻译: erpnext/04_Custom_Translation_Import.md
       - 模块扩展:
-        - HRMS Docker 安装踩坑: erpnext/05_HRMS_Docker_Install_Pitfalls.md
+        - HRMS 自定义镜像安装: erpnext/05_HRMS_Install_With_Custom_Image.md
   - 联系我们: contact.md
