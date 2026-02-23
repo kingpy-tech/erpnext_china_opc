@@ -9,20 +9,26 @@ on:
       - 'mkdocs.yml'
       - '.github/workflows/sync_docs.yml'
 
-# 显式授予 GITHUB_TOKEN 推送分支的权限
+# GitHub Pages 官方部署需要的权限配置
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
-    name: 构建并部署文档到 COS 和 GitHub Pages
+    name: 构建并部署文档
     runs-on: ubuntu-latest
     steps:
       - name: 获取最新代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 配置 Python 环境
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           
@@ -41,13 +47,24 @@ jobs:
           COS_BUCKET: ${{ secrets.TENCENT_COS_BUCKET }}
           COS_REGION: ${{ secrets.TENCENT_COS_REGION }}
         run: |
-          # 1. 初始化 COS 认证信息
-          coscmd config -a $COS_SECRET_ID -s $COS_SECRET_KEY -b $COS_BUCKET -r $COS_REGION
-          # 2. 将编译后的 site 目录的文件同步到 COS
-          coscmd upload -rs --delete ./site /
+          if [ -z "$COS_SECRET_ID" ] || [ -z "$COS_SECRET_KEY" ]; then
+            echo "⚠️ 警告: 缺少 COS 密钥，跳过腾讯云 COS 上传步骤。请确保在 Secrets 中正确配置了 TENCENT_COS_SECRET_ID 等 4 个变量。"
+          else
+            # 1. 初始化 COS 认证信息
+            coscmd config -a "$COS_SECRET_ID" -s "$COS_SECRET_KEY" -b "$COS_BUCKET" -r "$COS_REGION"
+            # 2. 将编译后的 site 目录的文件同步到 COS
+            coscmd upload -rs --delete ./site /
+            echo "✅ 成功上传到腾讯云 COS"
+          fi
 
-      - name: 部署到 GitHub Pages (海外版 kingpy.com)
-        uses: peaceiris/actions-gh-pages@v3
+      - name: 设置 GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传静态文件到 Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          path: './site'
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
