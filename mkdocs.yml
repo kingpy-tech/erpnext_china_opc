@@ -28,4 +28,6 @@ nav:
         - 自定义翻译: erpnext/04_Custom_Translation_Import.md
       - 模块扩展:
         - HRMS 自定义镜像安装: erpnext/05_HRMS_Install_With_Custom_Image.md
+      - UI 精简:
+        - Workspace 精简指南: erpnext/06_Workspace_Simplification.md
   - 联系我们: contact.md
