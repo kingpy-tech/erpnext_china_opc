@@ -11,17 +11,10 @@ echo "Building custom ERPNext (v16.7.2) + HRMS (version-16) image..."
 # Export apps.json to base64
 APPS_JSON_BASE64=$(base64 -w 0 apps_v16.json)
 
-# Build command (with proxy to speed up npm/apt in China)
-# 采用 --network host 让 Docker 共享宿主机 ShellCrash 本地环回代理
-export HTTP_PROXY="http://127.0.0.1:7890"
-export HTTPS_PROXY="http://127.0.0.1:7890"
-
+# Build command (with transparent proxy via host network)
+# 采用 --network host 让 Docker 直接走宿主机的 ShellCrash 透明网关
 docker build \
   --network host \
-  --build-arg=HTTP_PROXY=$HTTP_PROXY \
-  --build-arg=HTTPS_PROXY=$HTTPS_PROXY \
-  --build-arg=http_proxy=$HTTP_PROXY \
-  --build-arg=https_proxy=$HTTPS_PROXY \
   --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
   --build-arg=FRAPPE_BRANCH=$FRAPPE_BRANCH \
   --build-arg=PYTHON_VERSION=$PYTHON_VERSION \
