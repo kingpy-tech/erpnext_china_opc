@@ -4,7 +4,7 @@
 在使用 ERPNext 时，我们会发现官方的中文语言包虽然覆盖了大部分基础界面，但对于财务（Accounting）、税务等核心模块的很多专业词汇（例如：Account Category 科目类别）依然是全英文。
 
 如果直接修改底层代码进行汉化，不仅门槛高，而且在未来系统升级时极易被覆盖或导致系统崩溃。
-因此，我们坚持 **Frappe First (低代码/无代码)** 原则，采用原生的 **Translation (自定义翻译)** 功能。为了保留原有的英文语境以便对照官方英文文档，我们采用了 **“中英对照”** 的翻译策略（例如：将 `Trade Receivables` 翻译为 `Trade Receivables (应收账款)`）。
+因此，我们坚持 **Frappe First (低代码/无代码)** 原则，采用原生的 **Translation (自定义翻译)** 功能。翻译采用 **纯中文译文** 策略（例如：将 `Trade Receivables` 翻译为 `应收账款`），不使用括号中英混排。
 
 ## 如何使用本补丁？
 
@@ -27,12 +27,43 @@
 ### 3. 刷新并使翻译生效
 由于翻译内容会存在浏览器和系统缓存中，导入成功后需要强制刷新：
 - 点击 ERPNext 界面右上角的 **个人头像** -> 选择 **Reload (重新加载)**。
-- 此时，再次进入相应的模块页面，原本纯英文的词汇就会显示为友好的中英对照翻译了！
+- 此时，再次进入相应的模块页面，原本纯英文的词汇就会显示为友好的中文翻译了！
 
 ## 参与共建
 如果你在使用过程中发现了其他未汉化的界面，欢迎一起参与完善这个补丁库！
 1. 点击本仓库右上角的 **Fork**。
 2. 在 CSV 文件末尾新增一行，严格按照以下格式录入：
-   `zh,系统显示的纯英文,系统显示的纯英文 (你的中文翻译)`
+   `zh,系统显示的纯英文,你的中文翻译`
    *(注意：标点符号均为英文半角，首字母大小写必须与系统原词完全一致)*
 3. 提交 **Pull Request**。我们将持续合并，打造最适合中国小微企业的 ERPNext 翻译库！
+
+## 与分离更新脚本联动（推荐，避免升级后丢翻译）
+
+为了避免每次升级后忘记导入翻译，已在
+`config_package/setup_scripts/auto_update_erpnext.sh`
+中加入“升级后自动导入翻译 CSV（幂等）”能力。
+
+### 默认行为
+- `AUTO_IMPORT_TRANSLATIONS=1`（默认开启）
+- `TRANSLATION_DIR=/opt/1panel/docker/compose/erpnext/translations`
+- `TRANSLATION_GLOB=*_zh.csv`
+
+脚本会在 `migrate` 之后、资源验收之前：
+1. 扫描翻译目录下的 `*_zh.csv`
+2. 对每个站点执行“仅不存在则插入”的导入（不会覆盖原英文业务字段）
+3. 清理缓存并输出 `zh_count` 作为校验
+
+### 使用示例
+
+```bash
+# 默认开启自动导入翻译
+bash auto_update_erpnext.sh
+
+# 临时关闭自动导入翻译
+AUTO_IMPORT_TRANSLATIONS=0 bash auto_update_erpnext.sh
+
+# 指定翻译目录和匹配规则
+TRANSLATION_DIR=/opt/1panel/docker/compose/erpnext/translations \
+TRANSLATION_GLOB='*_zh.csv' \
+bash auto_update_erpnext.sh
+```

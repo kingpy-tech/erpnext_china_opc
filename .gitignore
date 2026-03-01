@@ -6,3 +6,6 @@ __pycache__/
 .vscode/
 site/
 venv/
+
+# Generated translation audit artifacts
+config_package/translations/audit/

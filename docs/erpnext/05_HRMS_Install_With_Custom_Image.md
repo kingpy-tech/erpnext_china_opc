@@ -1,5 +1,11 @@
 # 05 Docker 部署 ERPNext + HRMS：官方自定义镜像构建方法
 
+> ⚠️ 状态说明（红米服务器当前策略）
+>
+> 本文档保留为历史参考。`redmi-lan` 当前已切换为 **ERPNext 与 HRMS 分离更新**，不再作为推荐路径使用“集成打包镜像”。
+>
+> 请优先使用：`docs/erpnext/07_ERPNext_HRMS_Separated_Update.md`
+
 ## 痛点切入
 
 ERPNext v14 之后，HRMS（人力资源）模块从核心包彻底拆分。官方 Docker Hub 上的 `frappe/erpnext` 镜像**不含 HRMS**，直接 `bench install-app hrms` 在容器里行不通——因为 `apps/` 目录没有持久化，容器重启后一切归零。

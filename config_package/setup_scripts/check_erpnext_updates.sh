@@ -17,7 +17,7 @@ echo "官方最新的版本是: $LATEST_VERSION"
 
 if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ] && [ -n "$LATEST_VERSION" ]; then
     echo "发现新版本 ERPNext $LATEST_VERSION！建议寻找合适的维护窗口进行手动升级。"
-    
+
     # 【可选】发送通知给你的手机或团队群聊
     # 例如：利用企业微信、钉钉或飞书的 Webhook 机器人，或者 Server 酱
     # 下面是一个示例（如果你有 Webhook 地址的话取消注释并替换）：
