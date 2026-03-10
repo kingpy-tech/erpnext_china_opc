@@ -1,6 +1,6 @@
-# 🇨🇳 ERPNext 中国一人公司 / 小微企业合规配置包
+# 🇨🇳 ERPNext 中国小微企业合规配置包
 
-本项目 (`erpnext_china_opc`) 专为中国小微企业（特别是高新技术企业）和独立开发者定制的 ERPNext 合规开源配置方案。旨在通过 Frappe 原生的低代码/无代码能力，解决本地化部署与记账合规问题。
+本项目 (`erpnext_china_opc`) 专为中国小微企业定制的 ERPNext 合规开源配置方案。旨在通过 Frappe 原生的低代码/无代码能力，解决本地化部署与记账合规问题。
 
 ## 目录结构
 - `/docs`: 详细的实施与配置操作攻略、最佳实践总结。
@@ -8,7 +8,7 @@
   - `02_Chart_of_Accounts_Import.md`: 高新企业专属会计科目表集成导入指南。
   - `03_Document_Naming_Series.md`: 单据编号规则个性化定制指南 (ACC 替换为公司缩写)。
 - `/config_package/chart_of_accounts`: 针对高企认证标准定制的会计科目表数据源 (`erpnext_accounts_backup.csv`，支持 ERPNext Data Import 直接导入)。
-- `/config_package/custom_doctypes`: 预留用于后续导入自定义表单（如：股东名册等）的目录。
+- `/config_package/custom_doctypes`: 预留用于后续导入自定义表单的目录。
 - `/config_package/setup_scripts`: 预留存放自动化配置与高级定制脚本的目录。
 
 ## 核心特色与实施原则 (Frappe First)
