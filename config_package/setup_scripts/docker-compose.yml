@@ -4,11 +4,6 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-    environment:                 # 🚀 听你的！把代理原生焊死在这里！
-      - HTTP_PROXY=http://172.17.0.1:7890
-      - HTTPS_PROXY=http://172.17.0.1:7890
-      - http_proxy=http://172.17.0.1:7890
-      - https_proxy=http://172.17.0.1:7890
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
