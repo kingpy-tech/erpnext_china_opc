@@ -1,6 +1,6 @@
 services:
   backend:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -10,7 +10,7 @@ services:
       - apps:/home/frappe/frappe-bench/apps  # 🚀 救命核心：挂载 apps 目录
 
   configurator:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: none
@@ -50,7 +50,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -73,7 +73,7 @@ services:
       - "8080:8080"
 
   queue-default:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -88,7 +88,7 @@ services:
       - apps:/home/frappe/frappe-bench/apps  # 🚀
 
   queue-long:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -103,7 +103,7 @@ services:
       - apps:/home/frappe/frappe-bench/apps  # 🚀
 
   queue-short:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -142,7 +142,7 @@ services:
       - redis-socketio-data:/data
 
   scheduler:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
@@ -155,7 +155,7 @@ services:
       - apps:/home/frappe/frappe-bench/apps  # 🚀
 
   websocket:
-    image: frappe/erpnext:v16.8.2
+    image: frappe/erpnext:v16
     deploy:
       restart_policy:
         condition: on-failure
