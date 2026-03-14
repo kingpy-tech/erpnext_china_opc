@@ -10,6 +10,7 @@
     - [`00_ERPNext_Preparation_1Panel.md`](./00_ERPNext_Preparation_1Panel.md): 前置准备篇（选择 1Panel 面板的原因及安装指南）。
     - [`01_ERPNext_Micro_Server_Install.md`](./01_ERPNext_Micro_Server_Install.md): 基础安装指南（基于 Docker Compose 构建多租户双账套及 HRMS 的避坑部署）。
     - [`02_Advanced_Backup_Restore_Tenant.md`](./02_Advanced_Backup_Restore_Tenant.md): 高级运维篇（沙盒建立、快照回退与克隆玩法，为高危配置保驾护航）。
+    - [`05_OpenSource_Contribution_and_Fork.md`](./05_OpenSource_Contribution_and_Fork.md): 开源极客篇（提 PR 回馈社区、维护私人 Fork 库跟进官方升级与避免代码冲突的方法）。
   - **系统实施与配置阶段**
     - [`03_Chart_of_Accounts_Import.md`](./03_Chart_of_Accounts_Import.md): 高新企业专属会计科目表集成导入指南。
     - [`04_Custom_Translation_Import.md`](./04_Custom_Translation_Import.md): 自定义翻译导入指南（针对系统汉化不足的问题修补）。
