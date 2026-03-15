@@ -496,3 +496,24 @@
 
 - 用真实数据替换社区数据占位符
 - 考虑添加截图或演示 GIF 提升视觉吸引力
+
+---
+
+## 2026-03-16 Ops_Writer 轮
+
+### 完成情况
+- git status 检查：工作区干净，CMO 上轮变更已提交
+- git push origin main：远端已同步（up-to-date）
+- mkdocs build --strict 初次运行：发现 2 个 warning
+  - `docs/index.md` 中两处链接指向不存在的 `erpnext/01_Docker_Deployment.md`
+  - `PROJECT_STATUS.md`、`DEPLOY_CHECKLIST.md` 未加入 nav
+- 修复：
+  - 将两处断链替换为 `erpnext/01_ERPNext_Micro_Server_Install.md`
+  - 在 `mkdocs.yml` nav 中新增「项目状态」和「部署检查清单」两项
+- mkdocs build --strict 二次运行：0 warning，构建通过 ✅
+- 提交并推送：commit `a435f5f` — `docs: fix broken links in index.md and add PROJECT_STATUS/DEPLOY_CHECKLIST to nav`
+
+### 验收状态
+- [x] main 分支与远端同步
+- [x] mkdocs build --strict 通过（0 warning）
+- [x] HANDOFF 已更新
