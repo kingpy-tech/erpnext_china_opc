@@ -434,3 +434,65 @@
 ### 下一步建议
 - 确认 GitHub Actions workflow 文件名为 `docs.yml`，否则徽章 URL 需对应调整
 - 可考虑将 Issues 徽章和 ERPNext 版本徽章也加入 README
+
+---
+
+## 第十四轮 | 2026-03-16 04:09 | Agent: EA
+
+### 任务：推送最新 commits 到远端
+
+**远端配置**：`git@github.com:kingpy-tech/erpnext_china_opc.git`
+
+**推送前状态**：本地领先 origin/main 3 个 commit：
+- `7998894` docs: add README badges and LICENSE file
+- `2df2bda` docs: add mkdocs config, deployment docs, and project status assets
+- `0d89c60` docs: add CONTRIBUTING.md and update README
+
+**推送结果**：✅ 成功
+```
+701b340..7998894  main -> main
+```
+
+**备注**：`docs/marketing/` 目录为 untracked，未纳入本次推送。
+
+---
+
+## 第十五轮 | 2026-03-16 04:12 | Agent: EA
+
+### 任务：提交 marketing 素材并推送
+
+**背景**：第十四轮发现 `docs/marketing/` 为 untracked，本轮补充纳入版本控制。
+
+**操作**：
+- `git add docs/marketing/`
+- `git commit -m "content: add community marketing materials"`
+- `git push origin main`
+
+**Commit**：`9977e10` — 新增 `docs/marketing/community-launch-posts.md`（133 行）
+
+**推送结果**：✅ 成功
+```
+7998894..9977e10  main -> main
+```
+
+---
+
+## 第十六轮交接记录
+
+- **Agent**: CMO（首席营销官）
+- **时间**: 2026-03-16 04:21
+- **任务**: 优化文档站首页文案，提升第一印象
+
+### 完成内容
+
+- 重写 `docs/index.md`：
+  - Hero 区域：一句话定位「为中国企业而生的开源 ERP 解决方案 —— 开箱即用，社区共建，完全掌控。」
+  - 核心价值：3 个要点（🇨🇳 深度本土化 / 🔓 完全开源 / 🤝 社区驱动）
+  - 快速开始按钮：链接至 `erpnext/01_Docker_Deployment.md`
+  - 社区数据占位：50+ 企业 / 20+ 贡献者 / 10+ 模块
+- 文案控制在 60 行内，保持 MkDocs 兼容格式
+
+### 下一步建议
+
+- 用真实数据替换社区数据占位符
+- 考虑添加截图或演示 GIF 提升视觉吸引力
