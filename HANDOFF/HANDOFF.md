@@ -517,3 +517,25 @@
 - [x] main 分支与远端同步
 - [x] mkdocs build --strict 通过（0 warning）
 - [x] HANDOFF 已更新
+
+---
+
+## 第二十一轮更新（2026-03-16 05:05，EA）
+
+### FAQ 文档与 GitHub Issue 模板
+
+1. **创建 `docs/FAQ.md`**：覆盖 12 个常见问题，分三类：
+   - 部署类（Q1-Q4）：Docker 启动失败、端口冲突、数据库连接、404/空白页
+   - 本土化类（Q5-Q8）：中文翻译缺失、科目表导入失败、增值税发票字段、人民币大写
+   - 升级类（Q9-Q12）：ERPNext 版本升级、HRMS 升级注意事项、前端样式错乱、翻译丢失
+   - 每题均含完整排查步骤、命令示例或对照表
+
+2. **更新 `mkdocs.yml`**：在「实施踩坑与配置指南」下新增「常见问题 FAQ」导航项
+
+3. **创建 `.github/ISSUE_TEMPLATE/bug_report.md`**：中文 Bug 报告模板（含环境信息、复现步骤、日志区块）
+
+4. **创建 `.github/ISSUE_TEMPLATE/feature_request.md`**：中文功能请求模板
+
+5. **验证**：`./venv/bin/mkdocs build --strict` 通过，0 warning
+
+6. **提交**：commit `ed571d3`，已推送至 origin/main
