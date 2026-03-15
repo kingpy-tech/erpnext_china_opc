@@ -55,5 +55,7 @@ nav:
     - 04 自定义翻译补全指南: erpnext/04_Custom_Translation_Import.md
     - 05 优雅参与开源社区: erpnext/05_OpenSource_Contribution_and_Fork.md
     - 06 工作区简化与权限配置: erpnext/06_Workspace_Simplification.md
+  - 项目状态: PROJECT_STATUS.md
+  - 部署检查清单: DEPLOY_CHECKLIST.md
   - 联系我们: contact.md
   - 开源折腾笔记: projects.md

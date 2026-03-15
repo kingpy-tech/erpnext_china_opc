@@ -28,7 +28,7 @@
 
 准备好了吗？10 分钟用 Docker 把 ERPNext 跑起来：
 
-[🚀 立即开始 Docker 部署](erpnext/01_Docker_Deployment.md){ .md-button .md-button--primary }
+[🚀 立即开始部署](erpnext/01_ERPNext_Micro_Server_Install.md){ .md-button .md-button--primary }
 
 ---
 
@@ -45,7 +45,7 @@
 
 ## 核心内容
 
-- **[ERPNext 部署指南](erpnext/01_Docker_Deployment.md)** — Docker 单机 / 多租户完整流程
+- **[ERPNext 部署指南](erpnext/01_ERPNext_Micro_Server_Install.md)** — Docker 单机 / 多租户完整流程
 - **[中国本土化配置](erpnext/index.md)** — 财务、税务、翻译资产一站式
 - **[踩坑与避坑](erpnext/index.md)** — 真实案例，拿来即用
 
