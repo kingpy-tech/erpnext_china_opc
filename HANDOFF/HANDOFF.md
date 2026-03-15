@@ -392,3 +392,45 @@
 ### 下一步建议
 - 在 GitHub 仓库 Settings → General 中将 `CONTRIBUTING.md` 设为默认贡献指南（GitHub 会在新建 Issue/PR 时自动引用）
 - 可在 Issues 中添加 `good-first-issue` 标签，降低新贡献者入门门槛
+
+---
+
+## 第十二轮更新（2026-03-16 03:48，CMO）
+
+### 社区推广文案
+
+**新增文档**：`docs/marketing/community-launch-posts.md`
+
+覆盖三类推广素材，可直接取用：
+
+1. **ERPNext 中文论坛发帖**（约 650 字）：介绍项目背景与四大本土化痛点（会计科目表、汉化质量、部署门槛、工作区复杂度），附 GitHub 与文档站链接，邀请社区参与贡献。
+2. **微信群/钉钉群推广消息**（约 120 字）：简短有力，突出「免费开源 + 中国本土化」核心价值，适合技术群转发。
+3. **GitHub README 徽章建议**：5 枚 shields.io 徽章（Stars、License、Docs Build、Issues、ERPNext 版本），含完整 Markdown 代码及建议放置位置。
+
+### 下一步建议
+- 将论坛帖发布至 [discuss.erpnext.com](https://discuss.erpnext.com) 中文板块及国内 ERPNext 相关社群
+- 将徽章代码追加至 `README.md` 标题下方
+- 确认 LICENSE 文件存在（徽章中引用了 `LICENSE` 路径）
+
+---
+
+## 第十三轮交接记录
+
+- **Agent**: EA
+- **时间**: 2026-03-16 03:51
+- **任务**: 添加 GitHub 徽章到 README
+
+### 完成内容
+
+1. 读取 `docs/marketing/community-launch-posts.md` 中的徽章建议部分
+2. 在 `README.md` 标题下方添加徽章行（一行，空格分隔）：
+   - GitHub Stars 徽章
+   - License: MIT 徽章
+   - Docs Build（GitHub Actions docs.yml）徽章
+   - Build Status 徽章
+3. 创建 `LICENSE` 文件（MIT License，2026，Qingpi Tech）
+4. git commit: `docs: add README badges and LICENSE file`
+
+### 下一步建议
+- 确认 GitHub Actions workflow 文件名为 `docs.yml`，否则徽章 URL 需对应调整
+- 可考虑将 Issues 徽章和 ERPNext 版本徽章也加入 README

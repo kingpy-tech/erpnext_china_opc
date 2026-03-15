@@ -1,5 +1,7 @@
 # 🇨🇳 ERPNext 中国本土化踩坑与配置探索包
 
+[![GitHub Stars](https://img.shields.io/github/stars/kingpy-tech/erpnext_china_opc?style=flat-square&logo=github)](https://github.com/kingpy-tech/erpnext_china_opc/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/kingpy-tech/erpnext_china_opc/blob/main/LICENSE) [![Docs Build](https://img.shields.io/github/actions/workflow/status/kingpy-tech/erpnext_china_opc/docs.yml?branch=main&style=flat-square&label=docs)](https://github.com/kingpy-tech/erpnext_china_opc/actions) [![Build Status](https://img.shields.io/github/actions/workflow/status/kingpy-tech/erpnext_china_opc/docs.yml?branch=main&style=flat-square)](https://github.com/kingpy-tech/erpnext_china_opc/actions)
+
 本项目 (`erpnext_china_opc`) 是我们在探索和试用 ERPNext 过程中的一份实战踩坑记录与配置分享。
 我们是一群对 ERP 系统感兴趣的折腾玩家，希望能通过 Frappe 原生的低代码/无代码能力，顺便解决一下自己团队在本地化部署与记账合规上遇到的痛点。
 欢迎大家一起来试用、折腾和玩耍，交流进步，也希望能用这些开源经验顺便助力一下你的小微团队或独立业务！
