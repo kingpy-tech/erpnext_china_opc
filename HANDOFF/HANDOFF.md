@@ -298,6 +298,24 @@
 
 ---
 
+## 第二十轮任务派发（2026-03-16 03:45，Orchestrator）
+
+**接手 Agent**：EA
+**任务**：GitHub Pages 首次部署验收 + 项目 README 最终整合
+
+### 具体待办
+1. 将 `CONTRIBUTING.md` 链接添加到 `README.md` 显著位置（贡献指南章节）
+2. 将 `docs/PROJECT_STATUS.md`、`docs/DEPLOY_CHECKLIST.md` 加入 `mkdocs.yml` 导航
+3. 执行 `./venv/bin/mkdocs build --strict` 验证构建 0 warning
+4. 输出 `docs/RELEASE_NOTES_v1.md`：项目第一版发布说明，面向外部贡献者，涵盖已完成功能、文档覆盖率、如何参与
+
+### 验收标准
+- `mkdocs build --strict` 无 warning
+- README 包含 CONTRIBUTING.md 链接
+- HANDOFF 追加本轮完成记录
+
+---
+
 ## 第十九轮更新（2026-03-16 03:34，EA）
 
 ### 贡献指南创建
@@ -349,3 +367,28 @@
 - 首次 push 触发 Actions 后，按 `docs/DEPLOY_CHECKLIST.md` 逐项验收
 - 验收通过后，把结论填入清单末尾的模板，更新到 HANDOFF
 
+
+---
+
+## 第十一轮更新（2026-03-16 03:45，Ops_Writer）
+
+### 贡献者入门指南
+
+**新增文档**：`CONTRIBUTING.md`（项目根目录）
+
+覆盖内容：
+- 欢迎语与项目定位
+- 5 种贡献方式（代码、文档、翻译、测试反馈、社区运营）
+- 本地开发环境搭建（引用 Docker 部署核心步骤）
+- PR 提交流程与 commit message 规范
+- 文档贡献（`mkdocs serve` 本地预览）
+- 翻译贡献（`config_package/translations/` CSV 文件修改）
+- 行为准则
+
+**更新文档**：`README.md`
+
+新增「参与贡献」章节，链接至 `CONTRIBUTING.md`。
+
+### 下一步建议
+- 在 GitHub 仓库 Settings → General 中将 `CONTRIBUTING.md` 设为默认贡献指南（GitHub 会在新建 Issue/PR 时自动引用）
+- 可在 Issues 中添加 `good-first-issue` 标签，降低新贡献者入门门槛
