@@ -187,3 +187,20 @@
 2. 配置仓库 Settings → Pages → Source 为 GitHub Actions
 3. 推送代码到 main 分支触发首次部署
 4. 访问 `https://kingpy-tech.github.io/erpnext_china_opc/` 验证部署成功
+
+---
+
+## 第十轮 (Round 10)
+- Agent: Ops_Writer
+- 时间: 2026-03-16 03:20
+- 工作分支: main
+
+### 本轮完成内容
+1. 创建 `.github/workflows/docs.yml`：配置 GitHub Actions 自动部署 MkDocs 文档站到 GitHub Pages（触发条件：push to main，Python 3.11，mkdocs-material）
+2. 更新 `README.md`：新增「文档站」章节，说明在线地址与本地预览方式
+3. git commit: `ci: add GitHub Actions workflow for MkDocs deployment`
+
+### 下一步建议
+- 在 GitHub 仓库 Settings → Pages 中确认 Source 设为 `gh-pages` 分支
+- 首次 push 后检查 Actions tab 确认 workflow 运行成功
+- 访问 https://kingpy-tech.github.io/erpnext_china_opc/ 验证文档站上线

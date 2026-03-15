@@ -102,5 +102,19 @@ docker compose restart     # 重启所有服务
 2. 参照 `02` 号文档，建立属于自己的私有测试沙盒并打好快照（建立防废机制）。
 3. 参照 `03`、`04` 等后续文档，在沙盒中安全地进行财务科目、翻译等初始化数据的导入演练。
 
+## 文档站
+
+在线文档站地址：[https://kingpy-tech.github.io/erpnext_china_opc/](https://kingpy-tech.github.io/erpnext_china_opc/)
+
+每次推送到 `main` 分支后，GitHub Actions 会自动构建并部署最新文档。
+
+本地预览：
+
+```bash
+pip install mkdocs-material
+mkdocs serve
+# 浏览器访问 http://127.0.0.1:8000
+```
+
 ---
 *Powered by 青皮（上海）信息科技有限公司*
