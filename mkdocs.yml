@@ -1,0 +1,59 @@
+site_name: 🇨🇳 ERPNext 中国本土化配置包
+site_description: 记录我们在探索和试用 ERPNext 过程中的一份实战踩坑记录与配置分享
+site_author: Qingpi Tech
+repo_url: https://github.com/kingpy-tech/erpnext_china_opc
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色模式
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - 首页: index.md
+  - 为什么要参与贡献: WHY_CONTRIBUTE.md
+  - 实施踩坑与配置指南:
+    - 目录索引: erpnext/index.md
+    - 5 分钟快速启动: erpnext/00_Quick_Start.md
+    - 00 1Panel 前置准备: erpnext/00_ERPNext_Preparation_1Panel.md
+    - 01 基础安装与多租户隔离: erpnext/01_ERPNext_Micro_Server_Install.md
+    - 02 沙盒实验室与快照回退: erpnext/02_Advanced_Backup_Restore_Tenant.md
+    - 03 高新企业科目表导入: erpnext/03_Chart_of_Accounts_Import.md
+    - 04 自定义翻译补全指南: erpnext/04_Custom_Translation_Import.md
+    - 05 优雅参与开源社区: erpnext/05_OpenSource_Contribution_and_Fork.md
+    - 06 工作区简化与权限配置: erpnext/06_Workspace_Simplification.md
+  - 联系我们: contact.md
+  - 开源折腾笔记: projects.md
