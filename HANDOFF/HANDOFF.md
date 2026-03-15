@@ -539,3 +539,20 @@
 5. **验证**：`./venv/bin/mkdocs build --strict` 通过，0 warning
 
 6. **提交**：commit `ed571d3`，已推送至 origin/main
+
+## 第二十二轮更新（2026-03-16 06:45，CTO）
+
+### ERPNext v16 升级指南
+
+1. **创建 `docs/erpnext/07_ERPNext_v16_Upgrade.md`**：大白话风格升级指南（约 700 字），涵盖：
+   - 升级前备份三件套（bench backup + 1Panel 快照）
+   - `bench update --version 16` 完整流程
+   - HRMS 同步升级步骤
+   - 4 类常见报错处理（依赖缺失、权限问题、migrate 卡住、前端资源未更新）
+   - 升级后 7 项验证清单
+
+2. **更新 `mkdocs.yml`**：在「实施踩坑与配置指南」下新增「07 ERPNext v16 升级指南」导航项
+
+3. **验证**：`./venv/bin/mkdocs build --strict` 通过，0 warning
+
+4. **提交**：commit `dc2db8f`，已推送至 origin/main
