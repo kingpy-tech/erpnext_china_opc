@@ -204,3 +204,64 @@
 - 在 GitHub 仓库 Settings → Pages 中确认 Source 设为 `gh-pages` 分支
 - 首次 push 后检查 Actions tab 确认 workflow 运行成功
 - 访问 https://kingpy-tech.github.io/erpnext_china_opc/ 验证文档站上线
+
+---
+
+## 第十一轮更新（2026-03-16 03:25，EA）
+
+### GitHub Pages Workflow 验证
+- ✅ 读取 `.github/workflows/docs.yml`，文件结构完整：
+  - 触发条件：push to main（paths: docs/**, mkdocs.yml, .github/workflows/docs.yml）+ workflow_dispatch
+  - permissions: contents: write + pages: write + id-token: write ✅
+  - Python 3.11 + mkdocs-material 安装 ✅
+  - build job：configure-pages → upload-pages-artifact ✅
+  - deploy job：actions/deploy-pages@v4 ✅
+  - concurrency 防并发冲突 ✅
+  - 无需修改，workflow 完整可用。
+
+### README 最终整合检查
+- ✅ 「快速开始」章节：存在，含完整 docker compose 命令与常用命令速查
+- ✅ 「为什么参与这个项目？」章节：存在，CMO 第十二轮产出，内容完整
+- ✅ 「文档站」章节：存在，Ops_Writer 第十轮产出，含在线地址与本地预览命令
+- README 三大章节全部到位，无需补充。
+
+### 新增文件
+- 创建 `docs/PROJECT_STATUS.md`：面向外部贡献者的项目当前状态快照
+  - 已完成功能（部署架构、本土化配置、文档与自动化）
+  - 文档覆盖率（9 篇文档，全部 ✅）
+  - 如何本地运行（含 docker compose 命令与文档站预览）
+  - 如何参与贡献（Fork → PR 流程、Good First Issues 链接）
+  - 已知待办（05 文档跳号、HRMS 文档、微信支付、电子发票等）
+
+### 下一步建议
+- 在 GitHub 仓库 Settings → Pages 确认 Source 设为 `gh-pages` 分支（如使用本轮新增的 `mkdocs gh-deploy` 方案）
+- 将 `PROJECT_STATUS.md` 加入 `mkdocs.yml` 导航，供文档站访客直接查阅
+
+---
+
+## 第十七轮更新（2026-03-16 03:21，EA）
+
+### GitHub Actions 文档部署工作流落地
+- 已基于 `docs/GITHUB_PAGES_SETUP.md` 创建并修正实际工作流文件：`.github/workflows/docs.yml`
+- 工作流当前采用 **`mkdocs gh-deploy --force --clean`** 方案，满足“构建 MkDocs 并部署到 `gh-pages` 分支”的要求。
+
+### workflow 关键配置
+- **触发条件**：`push` 到 `main` 分支，且命中 `docs/**`、`mkdocs.yml`、`.github/workflows/docs.yml`；同时支持 `workflow_dispatch`
+- **运行环境**：`ubuntu-latest` + `Python 3.11`
+- **依赖安装**：安装 `mkdocs` 与 `mkdocs-material`
+- **构建校验**：先执行 `mkdocs build --strict`
+- **部署方式**：执行 `mkdocs gh-deploy --force --clean`，自动发布到 `gh-pages` 分支
+- **并发控制**：增加 `concurrency`，避免重复部署互相覆盖
+
+### 本地验证结果
+- 使用 `./venv/bin/mkdocs build --strict` 验证通过，文档可正常构建
+- 当前为 **warning 级提示**：`DOCUMENT_STRUCTURE.md`、`GITHUB_PAGES_SETUP.md`、`PROJECT_STATUS.md` 尚未加入 `nav`，但**不影响本次 workflow 构建和部署**
+
+### 提交信息
+- 已在 `main` 分支准备提交本轮变更：workflow 落地 + HANDOFF 更新
+
+### 下一步建议
+1. push 到远程后，在 GitHub 仓库 **Settings → Pages** 中确认发布来源与 `gh-pages` 分支匹配
+2. 首次 Actions 跑完后，检查 `gh-pages` 分支是否自动生成
+3. 访问文档站地址验证页面、样式与导航是否正常
+
