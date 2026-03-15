@@ -258,10 +258,94 @@
 - 当前为 **warning 级提示**：`DOCUMENT_STRUCTURE.md`、`GITHUB_PAGES_SETUP.md`、`PROJECT_STATUS.md` 尚未加入 `nav`，但**不影响本次 workflow 构建和部署**
 
 ### 提交信息
+
+---
+
+## 第十八轮更新（2026-03-16，Ops_Writer）
+
+### GitHub Pages 首次部署人工验收清单补齐
+
+1. **读取并核对了现有部署资料**
+   - 已检查 `docs/GITHUB_PAGES_SETUP.md`
+   - 已检查 `.github/workflows/docs.yml`
+   - 确认当前实际部署方式为：
+     - workflow：`.github/workflows/docs.yml`
+     - 触发：`push main` / `workflow_dispatch`
+     - 构建：`mkdocs build --strict`
+     - 发布：`mkdocs gh-deploy --force --clean`
+     - 目标分支：`gh-pages`
+
+2. **新增 `docs/DEPLOY_CHECKLIST.md`**
+   - 面向“首次 GitHub Pages 部署完成后”的人工验收场景
+   - 明确拆分了四类核心检查项：
+     1. **Actions 成功检查**：确认 workflow 触发、步骤完成、日志无构建/权限错误
+     2. **`gh-pages` 分支检查**：确认分支已生成、包含 `index.html` 与静态资源产物，而不是空分支
+     3. **404 / 页面访问检查**：确认首页可访问、异常路径表现符合预期、深链接和刷新不炸
+     4. **静态资源与导航检查**：确认 CSS/JS/图片加载正常、控制台无大面积 404、导航和内部链接可用
+
+3. **文档定位**
+   - 该清单不重复讲 workflow 如何配置，而是补上“部署完之后怎么人工验收”的最后一公里，和 `docs/GITHUB_PAGES_SETUP.md` 形成配套。
+
+### 下一步建议
+1. 首次 push 到 `main` 后，按 `docs/DEPLOY_CHECKLIST.md` 逐项验收并把结果回写到 HANDOFF 或发布记录中。
+2. 如果后续要减少首次部署踩坑率，可考虑把 `DEPLOY_CHECKLIST.md` 加入 `mkdocs.yml` 导航，作为对外公开的运维文档之一。
 - 已在 `main` 分支准备提交本轮变更：workflow 落地 + HANDOFF 更新
 
 ### 下一步建议
 1. push 到远程后，在 GitHub 仓库 **Settings → Pages** 中确认发布来源与 `gh-pages` 分支匹配
 2. 首次 Actions 跑完后，检查 `gh-pages` 分支是否自动生成
 3. 访问文档站地址验证页面、样式与导航是否正常
+
+---
+
+## 第十九轮更新（2026-03-16 03:34，EA）
+
+### 贡献指南创建
+- 基于 `docs/WHY_CONTRIBUTE.md` 创建了项目根目录的 `CONTRIBUTING.md`，明确了贡献流程和规范。
+- **贡献流程**：Fork → 本地开发 → 提交规范 → PR 要求 → 代码审查标准
+- **提交规范**：采用 `<type>(<scope>): <subject>` 格式，定义 7 种 commit 类型
+- **PR 要求**：提供 PR 标题格式、描述模板、检查清单
+- **代码审查**：明确审查流程、审查重点、常见反馈类型和回应方式
+- **测试要求**：单元测试、集成测试、端到端测试、文档测试
+- **贡献者权益**：定义初级、活跃、核心三级贡献者等级及相应权益
+
+### 已提交到 main 分支
+- 提交信息：`docs: add CONTRIBUTING.md with contribution guidelines`
+- 提交哈希：`be1e463`
+- 已推送到远程仓库
+
+### 下一步建议
+1. 将 `CONTRIBUTING.md` 链接添加到项目 README 的显著位置
+2. 在 GitHub 仓库设置中启用 Discussions，作为社区讨论平台
+3. 创建 `good-first-issue` 标签，标记适合新贡献者的入门任务
+
+---
+
+## 第十八轮更新（2026-03-16，Ops_Writer）
+
+### GitHub Pages 首次部署人工验收清单
+
+**新增文档**：`docs/DEPLOY_CHECKLIST.md`
+
+文档覆盖了首次 GitHub Pages 部署完成后的完整人工验收流程，分九个模块：
+
+1. **上线前提确认**：`site_url`、workflow 文件、Pages 来源策略
+2. **Actions 工作流验收**：触发确认、各步骤绿色、日志翻车信号识别
+3. **gh-pages 分支验收**：分支是否生成、静态产物是否完整
+4. **页面访问验收**：主页、404、深链接/刷新
+5. **静态资源验收**：CSS/JS/图片/favicon、浏览器控制台检查
+6. **导航与内容验收**：顶部/侧边导航、关键文档抽查、内部链接
+7. **验收结论记录模板**：可直接复制填入 HANDOFF
+8. **常见翻车点速记**：Actions 绿了但 404、样式全没、二级页面刷新炸、导航丢页
+9. **核心结论**：四关验收标准
+
+### 当前 workflow 关键信息（供验收时对照）
+- 工作流文件：`.github/workflows/docs.yml`
+- 部署命令：`mkdocs gh-deploy --force --clean`
+- 发布目标：`gh-pages` 分支
+- 文档站地址：`https://kingpy-tech.github.io/erpnext_china_opc/`
+
+### 下一步建议
+- 首次 push 触发 Actions 后，按 `docs/DEPLOY_CHECKLIST.md` 逐项验收
+- 验收通过后，把结论填入清单末尾的模板，更新到 HANDOFF
 
