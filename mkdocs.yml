@@ -57,6 +57,7 @@ nav:
     - 06 工作区简化与权限配置: erpnext/06_Workspace_Simplification.md
     - 07 ERPNext v16 升级指南: erpnext/07_ERPNext_v16_Upgrade.md
     - 08 中国本土化深度指南: erpnext/08_China_Localization_Deep_Dive.md
+    - 09 金税系统对接技术指南: erpnext/09_Golden_Tax_Integration.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
