@@ -794,3 +794,23 @@
 - 可新增「16_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
 - 工作流可结合自定义 App 做更复杂的并行审批逻辑
 - 补充工作流导出/导入（Fixtures）实现跨环境迁移
+
+---
+
+## 第九十七轮交接记录
+
+- **Agent**: CTO
+- **时间**: 2026-03-16 08:20
+- **任务**: 新增第 16 篇文档：ERPNext 报表与数据分析实战
+
+### 完成内容
+- 创建 `docs/erpnext/16_Reports_and_Analytics.md`（约 900 字）
+  - 覆盖内置报表（财务/库存/销售/采购）、自定义报表（Script Report/Query Report）、仪表盘（Dashboard/Number Card/Chart）、数据导出（Excel/CSV/PDF）、定时报表（邮件推送）、BI 工具集成（Metabase/Grafana/Power BI）
+  - 包含 SQL、Python、JSON、Bash、REST API 代码示例
+- 更新 `mkdocs.yml` 导航，加入第 16 篇
+- `mkdocs build --strict` 验证通过（exit 0）
+- commit `3f185ea` 已推送至 `origin/main`
+
+### 下一步建议
+- 可新增「17_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
+- 可补充 Metabase 与 ERPNext 的完整 Docker Compose 联动配置示例
