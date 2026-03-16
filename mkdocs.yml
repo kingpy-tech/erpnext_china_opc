@@ -60,6 +60,7 @@ nav:
     - 09 金税系统对接技术指南: erpnext/09_Golden_Tax_Integration.md
     - 10 微信生态集成指南: erpnext/10_WeChat_Integration.md
     - 11 性能优化实战指南: erpnext/11_Performance_Optimization.md
+    - 12 备份与灾难恢复指南: erpnext/12_Backup_and_Recovery.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
