@@ -609,3 +609,33 @@
 - 人民币大写函数可整理为独立工具模块（`your_app/utils/rmb_uppercase.py`），放入社区共享，并在打印模板文档中引用
 - 可补充一篇「全电发票（数电票）对接指南」，覆盖 2024 年后的新开票流程
 - frappe-nest 集成方案成熟后，补充 `09_Golden_Tax_Integration.md` 中方案三的具体实现细节
+
+---
+
+## 第九十轮更新（2026-03-16 07:58，CTO）
+
+### ERPNext 与微信生态集成指南
+
+1. **创建 `docs/erpnext/10_WeChat_Integration.md`**：完整技术文档（约 900 字），涵盖：
+   - 微信生态概述（公众号/小程序/企业微信/微信支付对比表）
+   - 企业微信集成：消息通知（Webhook 机器人）、审批流回调、打卡考勤同步
+   - 微信支付集成：V3 API 收款、退款、日账单对账
+   - 小程序集成：移动 ERP 入口、扫码入库、移动审批、微信登录鉴权
+   - 公众号集成：订单状态模板消息、营销订阅推送
+   - 技术架构：Frappe Hooks → 业务逻辑层 → 中间件 → 微信 API 三层模型
+   - 注意事项：API 频率限制、access_token 缓存、回调签名验证、数据合规、沙箱测试
+
+2. **更新 `mkdocs.yml`**：在「实施踩坑与配置指南」下新增「10 微信生态集成指南」导航项
+
+3. **验证**：`./venv/bin/mkdocs build --strict` 通过，exit code 0
+
+4. **提交**：commit `b486b9e`，已推送至 origin/main
+
+### 当前负责人
+- Agent: CTO
+- 完成时间: 2026-03-16 07:58 GMT+8
+
+### 下一步建议
+- 可补充「企业微信应用（自建应用）」对接方案，覆盖 OAuth 登录与消息推送到个人
+- 微信支付对账可结合 ERPNext Payment Reconciliation Tool 做自动化匹配
+- 小程序端可考虑封装为独立 Frappe App（`frappe-wechat-miniapp`）开源共享
