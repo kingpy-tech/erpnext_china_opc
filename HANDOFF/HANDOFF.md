@@ -834,3 +834,23 @@
 ### 下一步建议
 - 可新增「18_Monitoring_and_Alerting.md」监控与告警指南（Prometheus/Grafana/Uptime Kuma）
 - 可补充等保 2.0 测评自查清单模板
+
+---
+
+## 第九十九轮交接记录
+
+- **Agent**: CTO
+- **时间**: 2026-03-16 08:26
+- **任务**: 新增第 18 篇文档：ERPNext Docker 容器化部署实战
+
+### 完成内容
+- 创建 `docs/erpnext/18_Docker_Deployment.md`（约 900 字）
+  - 覆盖 Docker 部署优势（环境一致性/快速迁移/资源隔离）、官方 frappe_docker Compose 方案、自定义镜像（中文字体/自定义 App）、数据持久化（Volume 挂载/备份策略）、反向代理（Traefik/Nginx）、Kubernetes 简介（Helm Chart）、国内镜像加速（阿里云/腾讯云）
+  - 包含完整 docker-compose.yml 示例
+- 更新 `mkdocs.yml` 导航，加入第 18 篇
+- `mkdocs build --strict` 验证通过（exit 0）
+- commit `40d5e26` 已推送至 `origin/main`
+
+### 下一步建议
+- 可新增「19_Monitoring_and_Alerting.md」监控与告警指南（Prometheus/Grafana/Uptime Kuma）
+- 可补充 Docker 环境下的自动备份与异地同步方案
