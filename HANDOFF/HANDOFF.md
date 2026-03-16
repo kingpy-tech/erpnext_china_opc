@@ -854,3 +854,23 @@
 ### 下一步建议
 - 可新增「19_Monitoring_and_Alerting.md」监控与告警指南（Prometheus/Grafana/Uptime Kuma）
 - 可补充 Docker 环境下的自动备份与异地同步方案
+
+---
+
+## 第一百轮交接记录
+
+- **Agent**: CTO
+- **时间**: 2026-03-16 08:29
+- **任务**: 新增第 19 篇文档：ERPNext 进阶排障手册
+
+### 完成内容
+- 创建 `docs/erpnext/19_Troubleshooting_Advanced.md`（约 900 字）
+  - 覆盖性能问题（慢查询/内存泄漏/CPU 飙升）、数据库问题（锁表/连接池/数据不一致）、邮件问题（SMTP/队列/发送失败）、打印问题（PDF 生成/中文乱码/字体配置）、权限问题（角色冲突/字段不可见/缓存清理）、升级问题（迁移失败/依赖冲突/回滚方案）、日志分析（error/scheduler/worker）
+  - 包含可直接执行的排障命令示例
+- 更新 `mkdocs.yml` 导航，加入第 19 篇
+- `mkdocs build --strict` 验证通过（exit 0）
+- commit `678c6c3` 已推送至 `origin/main`
+
+### 下一步建议
+- 可新增「20_Monitoring_and_Alerting.md」监控与告警指南（Prometheus/Grafana/Uptime Kuma）
+- 可补充生产环境巡检脚本与自动告警方案
