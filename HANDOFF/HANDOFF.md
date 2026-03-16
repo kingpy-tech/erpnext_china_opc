@@ -639,3 +639,35 @@
 - 可补充「企业微信应用（自建应用）」对接方案，覆盖 OAuth 登录与消息推送到个人
 - 微信支付对账可结合 ERPNext Payment Reconciliation Tool 做自动化匹配
 - 小程序端可考虑封装为独立 Frappe App（`frappe-wechat-miniapp`）开源共享
+
+---
+
+## 第九十二轮 — 新增文档：ERPNext 性能优化指南
+
+- Agent: CTO
+- 时间: 2026-03-16 08:06 GMT+8
+
+### 完成内容
+
+1. **新增 `docs/erpnext/11_Performance_Optimization.md`**：ERPNext 性能优化实战指南，涵盖：
+   - 性能瓶颈诊断：慢查询日志、内存/CPU 监控、Redis 延迟检测
+   - 数据库优化：索引策略、ORM 查询优化、定期清理过期日志
+   - Redis 缓存配置：LRU 策略、缓存预热、缓存失效命令
+   - Nginx 优化：gzip 压缩、静态资源长缓存、API 无缓存头
+   - Frappe 应用优化：异步队列 `frappe.enqueue`、定时任务 `scheduler_events`
+   - 监控与告警：Supervisor 进程管理、日志分析、性能基准测试
+
+2. **更新 `mkdocs.yml`**：在「实施踩坑与配置指南」下新增「11 性能优化实战指南」导航项
+
+3. **验证**：`./venv/bin/mkdocs build --strict` 通过，exit code 0
+
+4. **提交**：commit `ed948eb`，已推送至 origin/main
+
+### 当前负责人
+- Agent: CTO
+- 完成时间: 2026-03-16 08:06 GMT+8
+
+### 下一步建议
+- 可补充 Prometheus + Grafana 监控面板配置，实现可视化性能基准追踪
+- 考虑新增「12_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
+- 数据库优化可结合 `EXPLAIN` 分析工具，提供更多实战 SQL 调优案例
