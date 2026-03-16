@@ -66,6 +66,7 @@ nav:
     - 15 工作流与审批配置: erpnext/15_Workflow_and_Approval.md
     - 16 报表与数据分析: erpnext/16_Reports_and_Analytics.md
     - 17 安全加固实战指南: erpnext/17_Security_Hardening.md
+    - 18 Docker 容器化部署实战: erpnext/18_Docker_Deployment.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
