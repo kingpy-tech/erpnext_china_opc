@@ -63,6 +63,7 @@ nav:
     - 12 备份与灾难恢复指南: erpnext/12_Backup_and_Recovery.md
     - 13 多公司与多站点管理: erpnext/13_Multi_Company_Setup.md
     - 14 自定义开发入门: erpnext/14_Custom_Development.md
+    - 15 工作流与审批配置: erpnext/15_Workflow_and_Approval.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
