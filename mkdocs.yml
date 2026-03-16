@@ -68,6 +68,7 @@ nav:
     - 17 安全加固实战指南: erpnext/17_Security_Hardening.md
     - 18 Docker 容器化部署实战: erpnext/18_Docker_Deployment.md
     - 19 进阶排障手册: erpnext/19_Troubleshooting_Advanced.md
+    - 20 知识图谱总导读: erpnext/20_Knowledge_Map.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
