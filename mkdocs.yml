@@ -61,6 +61,7 @@ nav:
     - 10 微信生态集成指南: erpnext/10_WeChat_Integration.md
     - 11 性能优化实战指南: erpnext/11_Performance_Optimization.md
     - 12 备份与灾难恢复指南: erpnext/12_Backup_and_Recovery.md
+    - 13 多公司与多站点管理: erpnext/13_Multi_Company_Setup.md
     - 常见问题 FAQ: FAQ.md
   - 项目状态: PROJECT_STATUS.md
   - 部署检查清单: DEPLOY_CHECKLIST.md
