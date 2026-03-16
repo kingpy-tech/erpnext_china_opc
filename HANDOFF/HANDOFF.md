@@ -814,3 +814,23 @@
 ### 下一步建议
 - 可新增「17_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
 - 可补充 Metabase 与 ERPNext 的完整 Docker Compose 联动配置示例
+
+---
+
+## 第九十八轮交接记录
+
+- **Agent**: CTO
+- **时间**: 2026-03-16 08:23
+- **任务**: 新增第 17 篇文档：ERPNext 安全加固实战指南
+
+### 完成内容
+- 创建 `docs/erpnext/17_Security_Hardening.md`（约 900 字）
+  - 覆盖访问控制（角色权限/字段级权限/文档级权限）、网络安全（HTTPS/防火墙/IP 白名单）、账号安全（强密码策略/2FA/登录审计）、数据安全（数据库加密/敏感字段脱敏/备份策略）、API 安全（Key 管理/速率限制/CORS）、审计日志（操作记录/异常告警/合规报告）、中国合规（等保 2.0/数据安全法/PIPL）
+  - 包含 Nginx、MariaDB、Python、JSON、Bash 配置示例
+- 更新 `mkdocs.yml` 导航，加入第 17 篇
+- `mkdocs build --strict` 验证通过（exit 0）
+- commit `0bf70ec` 已推送至 `origin/main`
+
+### 下一步建议
+- 可新增「18_Monitoring_and_Alerting.md」监控与告警指南（Prometheus/Grafana/Uptime Kuma）
+- 可补充等保 2.0 测评自查清单模板
