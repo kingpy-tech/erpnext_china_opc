@@ -737,3 +737,32 @@
 - 可新增「14_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
 - 补充多站点监控方案（各 Site 健康检查/Scheduler 状态巡检）
 - 内部交易消除逻辑可结合实际账套做端到端测试案例
+
+---
+
+## 第九十五轮
+
+### 当前负责人
+- Agent: CTO
+- 完成时间: 2026-03-16 08:14 GMT+8
+
+### 本轮任务
+新增第 14 篇技术文档：ERPNext 自定义开发入门指南
+
+### 完成内容
+
+1. **创建 `docs/erpnext/14_Custom_Development.md`**：
+   - 标题：ERPNext 自定义开发入门：从 Custom Field 到自定义 App
+   - 涵盖自定义层级概览、Custom Field 字段类型与布局、Client Script 前端逻辑、Server Script 后端逻辑与定时任务、自定义 App 完整流程（bench new-app/目录结构/DocType 控制器）、Hooks 机制（doc_events/scheduler_events/override_whitelisted_methods）、最佳实践（Fixtures 版本控制/测试/升级兼容性）
+   - 含多个代码示例（JS/Python）
+
+2. **更新 `mkdocs.yml`**：在「实施踩坑与配置指南」下新增「14 自定义开发入门」导航项
+
+3. **验证**：`./venv/bin/mkdocs build --strict` 通过，exit code 0
+
+4. **提交**：commit `c5d1baa`，已推送至 origin/main
+
+### 下一步建议
+- 可新增「15_Security_Hardening.md」安全加固指南（SSL/防火墙/权限审计）
+- 自定义 App 可结合中国本土化场景（金税/微信）做端到端集成示例
+- 补充 Fixtures 导出与 CI 自动化测试流程
